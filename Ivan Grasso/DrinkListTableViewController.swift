@@ -24,6 +24,12 @@ class DrinkListTableViewController: UITableViewController {
         let nib = UINib(nibName: String(describing: DrinkCell.self), bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: String(describing: DrinkCell.self))
         
+        title = "Cocktail Glass Drinks"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: Colors.Text.drinkListTitleColor]
+        
+        view.backgroundColor = Colors.drinkListBackgroundColor
+        navigationController?.navigationBar.barTintColor = Colors.drinkListBackgroundColor
+                
         presenter.delegate = self
         presenter.viewDidLoad()
     }
@@ -36,6 +42,7 @@ class DrinkListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DrinkCell.self)) as? DrinkCell else {
             return UITableViewCell()
         }
+        
         let viewData = DrinkCell.ViewData(drink: drinks[indexPath.row])
         cell.viewData = viewData
         return cell

@@ -13,7 +13,7 @@
 		2D94DD6A26C843E9006D156F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D94DD6826C843E9006D156F /* Main.storyboard */; };
 		2D94DD6C26C843EA006D156F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D94DD6B26C843EA006D156F /* Assets.xcassets */; };
 		2D94DD7826C844DF006D156F /* DrinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7726C844DF006D156F /* DrinkItem.swift */; };
-		2D94DD7A26C84562006D156F /* DrinkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7926C84562006D156F /* DrinkResponse.swift */; };
+		2D94DD7A26C84562006D156F /* DrinkListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7926C84562006D156F /* DrinkListResponse.swift */; };
 		2D94DD7C26C845F0006D156F /* DrinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7B26C845F0006D156F /* DrinksService.swift */; };
 		2D94DD7E26C8502C006D156F /* DrinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D94DD7D26C8502C006D156F /* DrinkCell.xib */; };
 		2D94DD8026C85371006D156F /* DrinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7F26C85371006D156F /* DrinkCell.swift */; };
@@ -33,7 +33,7 @@
 		2D94DD6B26C843EA006D156F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D94DD7026C843EA006D156F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D94DD7726C844DF006D156F /* DrinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkItem.swift; sourceTree = "<group>"; };
-		2D94DD7926C84562006D156F /* DrinkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkResponse.swift; sourceTree = "<group>"; };
+		2D94DD7926C84562006D156F /* DrinkListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListResponse.swift; sourceTree = "<group>"; };
 		2D94DD7B26C845F0006D156F /* DrinksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksService.swift; sourceTree = "<group>"; };
 		2D94DD7D26C8502C006D156F /* DrinkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCell.xib; sourceTree = "<group>"; };
 		2D94DD7F26C85371006D156F /* DrinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCell.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			children = (
 				2D94DD7726C844DF006D156F /* DrinkItem.swift */,
 				2DB4594D26C9DC2600CC2DCA /* DrinkDetail.swift */,
-				2D94DD7926C84562006D156F /* DrinkResponse.swift */,
+				2D94DD7926C84562006D156F /* DrinkListResponse.swift */,
 				2DB4594F26C9E07200CC2DCA /* DrinkDetailResponse.swift */,
 			);
 			path = Model;
@@ -198,7 +198,7 @@
 			files = (
 				2D94DD6726C843E9006D156F /* DrinkListTableViewController.swift in Sources */,
 				2DB4594826C9CA6500CC2DCA /* Colors.swift in Sources */,
-				2D94DD7A26C84562006D156F /* DrinkResponse.swift in Sources */,
+				2D94DD7A26C84562006D156F /* DrinkListResponse.swift in Sources */,
 				2D94DD6326C843E9006D156F /* AppDelegate.swift in Sources */,
 				2D94DD8026C85371006D156F /* DrinkCell.swift in Sources */,
 				2DB4594E26C9DC2600CC2DCA /* DrinkDetail.swift in Sources */,

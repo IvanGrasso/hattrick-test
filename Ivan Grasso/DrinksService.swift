@@ -18,7 +18,7 @@ class DrinksService {
                       let httpResponse = response as? HTTPURLResponse,
                       httpResponse.statusCode == 200 {
                 do {
-                    let response = try JSONDecoder().decode(DrinkResponse.self, from: data)
+                    let response = try JSONDecoder().decode(DrinkListResponse.self, from: data)
                     completion(.success(response.drinks))
                 } catch {
                     completion(.failure(error))

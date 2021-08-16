@@ -10,7 +10,7 @@ import Foundation
 class DrinksService {
     let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass")!
     
-    func fetchDrinks(completion: @escaping (Result<[Drink], Error>) -> Void) {
+    func fetchDrinks(completion: @escaping (Result<[DrinkItem], Error>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(.failure(error))

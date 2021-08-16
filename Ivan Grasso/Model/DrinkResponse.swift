@@ -8,5 +8,5 @@
 import Foundation
 
 struct DrinkResponse: Decodable {
-    let drinks: [Drink]
+    let drinks: [DrinkItem]
 }

@@ -51,9 +51,9 @@ class DrinkCell: UITableViewCell {
 }
 
 extension DrinkCell.ViewData {
-    init(drink: Drink) {
-        self.title = drink.strDrink
-        self.thumbnail = drink.strDrinkThumb
+    init(drink: DrinkItem) {
+        self.title = drink.name
+        self.thumbnail = drink.thumbnail
     }
 }
 

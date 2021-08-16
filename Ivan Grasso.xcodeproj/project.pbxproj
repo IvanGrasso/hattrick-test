@@ -12,7 +12,7 @@
 		2D94DD6726C843E9006D156F /* DrinkListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD6626C843E9006D156F /* DrinkListTableViewController.swift */; };
 		2D94DD6A26C843E9006D156F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D94DD6826C843E9006D156F /* Main.storyboard */; };
 		2D94DD6C26C843EA006D156F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D94DD6B26C843EA006D156F /* Assets.xcassets */; };
-		2D94DD7826C844DF006D156F /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7726C844DF006D156F /* Drink.swift */; };
+		2D94DD7826C844DF006D156F /* DrinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7726C844DF006D156F /* DrinkItem.swift */; };
 		2D94DD7A26C84562006D156F /* DrinkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7926C84562006D156F /* DrinkResponse.swift */; };
 		2D94DD7C26C845F0006D156F /* DrinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7B26C845F0006D156F /* DrinksService.swift */; };
 		2D94DD7E26C8502C006D156F /* DrinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D94DD7D26C8502C006D156F /* DrinkCell.xib */; };
@@ -20,6 +20,8 @@
 		2D94DD8326C85910006D156F /* UIImageView+LoadFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD8226C85910006D156F /* UIImageView+LoadFromURL.swift */; };
 		2D94DD8526C8781F006D156F /* DrinkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD8426C8781F006D156F /* DrinkPresenter.swift */; };
 		2DB4594826C9CA6500CC2DCA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4594726C9CA6500CC2DCA /* Colors.swift */; };
+		2DB4594E26C9DC2600CC2DCA /* DrinkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4594D26C9DC2600CC2DCA /* DrinkDetail.swift */; };
+		2DB4595026C9E07200CC2DCA /* DrinkDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4594F26C9E07200CC2DCA /* DrinkDetailResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +32,7 @@
 		2D94DD6926C843E9006D156F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D94DD6B26C843EA006D156F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D94DD7026C843EA006D156F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D94DD7726C844DF006D156F /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		2D94DD7726C844DF006D156F /* DrinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkItem.swift; sourceTree = "<group>"; };
 		2D94DD7926C84562006D156F /* DrinkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkResponse.swift; sourceTree = "<group>"; };
 		2D94DD7B26C845F0006D156F /* DrinksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksService.swift; sourceTree = "<group>"; };
 		2D94DD7D26C8502C006D156F /* DrinkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCell.xib; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		2D94DD8226C85910006D156F /* UIImageView+LoadFromURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadFromURL.swift"; sourceTree = "<group>"; };
 		2D94DD8426C8781F006D156F /* DrinkPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkPresenter.swift; sourceTree = "<group>"; };
 		2DB4594726C9CA6500CC2DCA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2DB4594D26C9DC2600CC2DCA /* DrinkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetail.swift; sourceTree = "<group>"; };
+		2DB4594F26C9E07200CC2DCA /* DrinkDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +93,10 @@
 		2D94DD7626C844CB006D156F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2D94DD7726C844DF006D156F /* Drink.swift */,
+				2D94DD7726C844DF006D156F /* DrinkItem.swift */,
+				2DB4594D26C9DC2600CC2DCA /* DrinkDetail.swift */,
 				2D94DD7926C84562006D156F /* DrinkResponse.swift */,
+				2DB4594F26C9E07200CC2DCA /* DrinkDetailResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,7 +201,9 @@
 				2D94DD7A26C84562006D156F /* DrinkResponse.swift in Sources */,
 				2D94DD6326C843E9006D156F /* AppDelegate.swift in Sources */,
 				2D94DD8026C85371006D156F /* DrinkCell.swift in Sources */,
-				2D94DD7826C844DF006D156F /* Drink.swift in Sources */,
+				2DB4594E26C9DC2600CC2DCA /* DrinkDetail.swift in Sources */,
+				2DB4595026C9E07200CC2DCA /* DrinkDetailResponse.swift in Sources */,
+				2D94DD7826C844DF006D156F /* DrinkItem.swift in Sources */,
 				2D94DD8526C8781F006D156F /* DrinkPresenter.swift in Sources */,
 				2D94DD7C26C845F0006D156F /* DrinksService.swift in Sources */,
 				2D94DD8326C85910006D156F /* UIImageView+LoadFromURL.swift in Sources */,

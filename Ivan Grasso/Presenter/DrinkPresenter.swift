@@ -28,5 +28,5 @@ class DrinkPresenter {
 typealias DrinkListPresenterDelegate = DrinkPresenterDelegate & DrinkListTableViewController
 
 protocol DrinkPresenterDelegate: AnyObject {
-    func presentDrinks(_ drinks: [Drink])
+    func presentDrinks(_ drinks: [DrinkItem])
 }

@@ -10,7 +10,7 @@ import UIKit
 class DrinkListTableViewController: UITableViewController {
     
     private let presenter = DrinkPresenter()
-    private var drinks = [Drink]() {
+    private var drinks = [DrinkItem]() {
         didSet {
             DispatchQueue.main.async() {
                 self.tableView.reloadData()
@@ -54,7 +54,7 @@ class DrinkListTableViewController: UITableViewController {
 }
 
 extension DrinkListTableViewController: DrinkPresenterDelegate {
-    func presentDrinks(_ drinks: [Drink]) {
+    func presentDrinks(_ drinks: [DrinkItem]) {
         self.drinks = drinks
     }
 }

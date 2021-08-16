@@ -56,6 +56,8 @@ class DrinkDetailViewController: UIViewController {
     private func updateLayout() {
         guard let viewData = viewData,
               self.isViewLoaded else { return }
+        
+        title = viewData.title
                 
         imageView.loadImage(fromURLString: viewData.imageURL, withContentMode: .scaleAspectFill)
         

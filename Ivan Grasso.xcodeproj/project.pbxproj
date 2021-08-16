@@ -98,10 +98,10 @@
 		2D94DD7626C844CB006D156F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2D94DD7726C844DF006D156F /* DrinkItem.swift */,
-				2DB4594D26C9DC2600CC2DCA /* DrinkDetail.swift */,
 				2D94DD7926C84562006D156F /* DrinkListResponse.swift */,
 				2DB4594F26C9E07200CC2DCA /* DrinkDetailResponse.swift */,
+				2D94DD7726C844DF006D156F /* DrinkItem.swift */,
+				2DB4594D26C9DC2600CC2DCA /* DrinkDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -372,7 +372,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hattrick.ivan-grasso.Ivan-Grasso";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hattrick.Ivan-Grasso";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -390,7 +390,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hattrick.ivan-grasso.Ivan-Grasso";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hattrick.Ivan-Grasso";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

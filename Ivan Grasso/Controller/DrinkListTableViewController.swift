@@ -25,10 +25,11 @@ class DrinkListTableViewController: UITableViewController {
         tableView.register(nib, forCellReuseIdentifier: String(describing: DrinkCell.self))
         
         title = "Cocktail Glass Drinks"
+        navigationController?.navigationBar.barTintColor = Colors.mainBackgroundColor
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: Colors.Text.drinkListTitleColor]
+        navigationController?.navigationBar.tintColor = Colors.Text.drinkListTitleColor
         
         view.backgroundColor = Colors.mainBackgroundColor
-        navigationController?.navigationBar.barTintColor = Colors.mainBackgroundColor
                 
         presenter.delegate = self
         presenter.viewDidLoad()

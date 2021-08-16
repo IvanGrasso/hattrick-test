@@ -46,13 +46,18 @@ class DrinkDetailViewController: UIViewController {
         instructionsLabel.numberOfLines = 0
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let viewData = viewData else { return }
+        title = viewData.title
+    }
+    
     private func updateLayout() {
         guard let viewData = viewData,
               self.isViewLoaded else { return }
-        
-        title = viewData.title
-        
-        imageView.loadImage(fromURLString: viewData.imageURL)
+                
+        imageView.loadImage(fromURLString: viewData.imageURL, withContentMode: .scaleAspectFill)
         
         contentStackView.arrangedSubviews.forEach{ $0.removeFromSuperview() }
         

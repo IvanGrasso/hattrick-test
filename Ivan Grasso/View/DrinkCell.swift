@@ -28,15 +28,12 @@ class DrinkCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        backgroundColor = Colors.drinkListBackgroundColor
+        backgroundColor = Colors.mainBackgroundColor
                 
-        containerView.layer.cornerRadius = 6
-        containerView.applyCustomShadow()
+        containerView.applyCustomCornersAndShadow()
+        thumbnailImageView?.applyCustomCornersAndShadow()
         
-        thumbnailImageView?.layer.cornerRadius = 6
-        thumbnailImageView?.applyCustomShadow()
-        
-        titleLabel.textColor = Colors.Text.drinkTitleColor
+        titleLabel.textColor = Colors.Text.mainTextColor
         titleLabel.font = UIFont.systemFont(ofSize: 24, weight: .regular)
         titleLabel.text = nil
     }
@@ -54,14 +51,5 @@ extension DrinkCell.ViewData {
     init(drink: DrinkItem) {
         self.title = drink.name
         self.thumbnail = drink.thumbnail
-    }
-}
-
-private extension UIView {
-    func applyCustomShadow() {
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.3
-        layer.shadowOffset = CGSize(width: 1, height: 1)
-        layer.shadowRadius = 3
     }
 }

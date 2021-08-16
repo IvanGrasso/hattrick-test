@@ -10,9 +10,9 @@ import UIKit
 
 struct Colors {
     struct Text {
-        static let drinkTitleColor = UIColor(red: 0.35, green: 0.35, blue: 0.35, alpha: 1.00)
+        static let mainTextColor = UIColor(red: 0.35, green: 0.35, blue: 0.35, alpha: 1.00)
         static let drinkListTitleColor = UIColor.white
     }
     
-    static let drinkListBackgroundColor = UIColor(red: 0.30, green: 0.74, blue: 0.82, alpha: 1)
+    static let mainBackgroundColor = UIColor(red: 0.30, green: 0.74, blue: 0.82, alpha: 1)
 }

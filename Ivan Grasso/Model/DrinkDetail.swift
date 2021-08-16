@@ -12,6 +12,7 @@ struct DrinkDetail: Decodable {
     let instructions: String
     let thumbnail: String
     let ingredients: [String]
+    let measures: [String]
     
     enum CodingKeys: String, CodingKey {
         case name = "strDrink"
@@ -41,7 +42,11 @@ struct DrinkDetail: Decodable {
         
         let dynamicKeysContainer = try decoder.container(keyedBy: DynamicKey.self)
         
-        self.ingredients = dynamicKeysContainer.allKeys.filter{ $0.stringValue.contains("strIngredient") }.compactMap{
+        self.ingredients = dynamicKeysContainer.allKeys.filter { $0.stringValue.contains("strIngredient") }.compactMap {
+            try? dynamicKeysContainer.decode(String.self, forKey: $0)
+        }
+        
+        self.measures = dynamicKeysContainer.allKeys.filter { $0.stringValue.contains("strMeasure") }.compactMap {
             try? dynamicKeysContainer.decode(String.self, forKey: $0)
         }
     }

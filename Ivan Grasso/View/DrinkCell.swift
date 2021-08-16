@@ -28,7 +28,7 @@ class DrinkCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        backgroundColor = UIColor(red: 0.30, green: 0.74, blue: 0.82, alpha: 1)
+        backgroundColor = Colors.drinkListBackgroundColor
                 
         containerView.layer.cornerRadius = 6
         containerView.applyCustomShadow()

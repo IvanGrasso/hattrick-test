@@ -265,7 +265,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2D94DD5A26C843E9006D156F /* Build configuration list for PBXProject "Hattrick Challenge" */;
+			buildConfigurationList = 2D94DD5A26C843E9006D156F /* Build configuration list for PBXProject "HattrickChallenge" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -556,7 +556,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D94DD5A26C843E9006D156F /* Build configuration list for PBXProject "Hattrick Challenge" */ = {
+		2D94DD5A26C843E9006D156F /* Build configuration list for PBXProject "HattrickChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D94DD7126C843EA006D156F /* Debug */,

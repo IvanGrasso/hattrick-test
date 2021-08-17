@@ -30,10 +30,21 @@
 		2DB4595F26CAE27A00CC2DCA /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4595E26CAE27A00CC2DCA /* Cancellable.swift */; };
 		2DB4596326CAE32000CC2DCA /* DrinksEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4596226CAE32000CC2DCA /* DrinksEndpoint.swift */; };
 		2DB4596526CAEC3200CC2DCA /* DrinkDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4596426CAEC3200CC2DCA /* DrinkDetailPresenter.swift */; };
+		2DB4596F26CBF21300CC2DCA /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4596E26CBF21300CC2DCA /* Tests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2DB4597126CBF21300CC2DCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D94DD5726C843E9006D156F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D94DD5E26C843E9006D156F;
+			remoteInfo = "Ivan Grasso";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		2D94DD5F26C843E9006D156F /* Ivan Grasso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ivan Grasso.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D94DD5F26C843E9006D156F /* HattrickChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HattrickChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D94DD6226C843E9006D156F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D94DD6426C843E9006D156F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2D94DD6626C843E9006D156F /* DrinkListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListTableViewController.swift; sourceTree = "<group>"; };
@@ -58,10 +69,20 @@
 		2DB4595E26CAE27A00CC2DCA /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		2DB4596226CAE32000CC2DCA /* DrinksEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksEndpoint.swift; sourceTree = "<group>"; };
 		2DB4596426CAEC3200CC2DCA /* DrinkDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailPresenter.swift; sourceTree = "<group>"; };
+		2DB4596C26CBF21300CC2DCA /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DB4596E26CBF21300CC2DCA /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		2DB4597026CBF21300CC2DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2D94DD5C26C843E9006D156F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DB4596926CBF21300CC2DCA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,7 +95,8 @@
 		2D94DD5626C843E9006D156F = {
 			isa = PBXGroup;
 			children = (
-				2D94DD6126C843E9006D156F /* Ivan Grasso */,
+				2D94DD6126C843E9006D156F /* Hattrick Challenge */,
+				2DB4596D26CBF21300CC2DCA /* Tests */,
 				2D94DD6026C843E9006D156F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,12 +104,13 @@
 		2D94DD6026C843E9006D156F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D94DD5F26C843E9006D156F /* Ivan Grasso.app */,
+				2D94DD5F26C843E9006D156F /* HattrickChallenge.app */,
+				2DB4596C26CBF21300CC2DCA /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2D94DD6126C843E9006D156F /* Ivan Grasso */ = {
+		2D94DD6126C843E9006D156F /* Hattrick Challenge */ = {
 			isa = PBXGroup;
 			children = (
 				2D94DD6226C843E9006D156F /* AppDelegate.swift */,
@@ -103,7 +126,7 @@
 				2DB4596026CAE2AA00CC2DCA /* Networking */,
 				2DB4594926C9D08A00CC2DCA /* Utils */,
 			);
-			path = "Ivan Grasso";
+			path = "Hattrick Challenge";
 			sourceTree = "<group>";
 		};
 		2D94DD7626C844CB006D156F /* Model */ = {
@@ -174,12 +197,21 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		2DB4596D26CBF21300CC2DCA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2DB4596E26CBF21300CC2DCA /* Tests.swift */,
+				2DB4597026CBF21300CC2DCA /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2D94DD5E26C843E9006D156F /* Ivan Grasso */ = {
+		2D94DD5E26C843E9006D156F /* HattrickChallenge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D94DD7326C843EA006D156F /* Build configuration list for PBXNativeTarget "Ivan Grasso" */;
+			buildConfigurationList = 2D94DD7326C843EA006D156F /* Build configuration list for PBXNativeTarget "HattrickChallenge" */;
 			buildPhases = (
 				2D94DD5B26C843E9006D156F /* Sources */,
 				2D94DD5C26C843E9006D156F /* Frameworks */,
@@ -189,10 +221,28 @@
 			);
 			dependencies = (
 			);
-			name = "Ivan Grasso";
+			name = HattrickChallenge;
 			productName = "Ivan Grasso";
-			productReference = 2D94DD5F26C843E9006D156F /* Ivan Grasso.app */;
+			productReference = 2D94DD5F26C843E9006D156F /* HattrickChallenge.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2DB4596B26CBF21300CC2DCA /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DB4597326CBF21300CC2DCA /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				2DB4596826CBF21300CC2DCA /* Sources */,
+				2DB4596926CBF21300CC2DCA /* Frameworks */,
+				2DB4596A26CBF21300CC2DCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DB4597226CBF21300CC2DCA /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 2DB4596C26CBF21300CC2DCA /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -206,9 +256,13 @@
 					2D94DD5E26C843E9006D156F = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
+					2DB4596B26CBF21300CC2DCA = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 2D94DD5E26C843E9006D156F;
+					};
 				};
 			};
-			buildConfigurationList = 2D94DD5A26C843E9006D156F /* Build configuration list for PBXProject "Ivan Grasso" */;
+			buildConfigurationList = 2D94DD5A26C843E9006D156F /* Build configuration list for PBXProject "Hattrick Challenge" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -221,7 +275,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2D94DD5E26C843E9006D156F /* Ivan Grasso */,
+				2D94DD5E26C843E9006D156F /* HattrickChallenge */,
+				2DB4596B26CBF21300CC2DCA /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +290,13 @@
 				2D94DD6C26C843EA006D156F /* Assets.xcassets in Resources */,
 				2D94DD7E26C8502C006D156F /* DrinkCell.xib in Resources */,
 				2D94DD6A26C843E9006D156F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DB4596A26CBF21300CC2DCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +329,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2DB4596826CBF21300CC2DCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB4596F26CBF21300CC2DCA /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DB4597226CBF21300CC2DCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D94DD5E26C843E9006D156F /* HattrickChallenge */;
+			targetProxy = 2DB4597126CBF21300CC2DCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2D94DD6826C843E9006D156F /* Main.storyboard */ = {
@@ -403,12 +481,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Ivan Grasso/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Hattrick Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hattrick.Ivan-Grasso";
+				PRODUCT_BUNDLE_IDENTIFIER = HattrickChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -421,22 +499,60 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Ivan Grasso/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Hattrick Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hattrick.Ivan-Grasso";
+				PRODUCT_BUNDLE_IDENTIFIER = HattrickChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
+		2DB4597426CBF21300CC2DCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hattrick.ivan-grasso.Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hattrick Challenge.app/Hattrick Challenge";
+			};
+			name = Debug;
+		};
+		2DB4597526CBF21300CC2DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hattrick.ivan-grasso.Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hattrick Challenge.app/Hattrick Challenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D94DD5A26C843E9006D156F /* Build configuration list for PBXProject "Ivan Grasso" */ = {
+		2D94DD5A26C843E9006D156F /* Build configuration list for PBXProject "Hattrick Challenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D94DD7126C843EA006D156F /* Debug */,
@@ -445,11 +561,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D94DD7326C843EA006D156F /* Build configuration list for PBXNativeTarget "Ivan Grasso" */ = {
+		2D94DD7326C843EA006D156F /* Build configuration list for PBXNativeTarget "HattrickChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D94DD7426C843EA006D156F /* Debug */,
 				2D94DD7526C843EA006D156F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DB4597326CBF21300CC2DCA /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DB4597426CBF21300CC2DCA /* Debug */,
+				2DB4597526CBF21300CC2DCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

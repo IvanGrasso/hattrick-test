@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D8D23A426CBF9B7009FEA65 /* DrinkDetailResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D8D23A326CBF9B7009FEA65 /* DrinkDetailResponse.json */; };
 		2D94DD6326C843E9006D156F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD6226C843E9006D156F /* AppDelegate.swift */; };
 		2D94DD6526C843E9006D156F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD6426C843E9006D156F /* SceneDelegate.swift */; };
 		2D94DD6726C843E9006D156F /* DrinkListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD6626C843E9006D156F /* DrinkListTableViewController.swift */; };
@@ -30,7 +31,7 @@
 		2DB4595F26CAE27A00CC2DCA /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4595E26CAE27A00CC2DCA /* Cancellable.swift */; };
 		2DB4596326CAE32000CC2DCA /* DrinksEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4596226CAE32000CC2DCA /* DrinksEndpoint.swift */; };
 		2DB4596526CAEC3200CC2DCA /* DrinkDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4596426CAEC3200CC2DCA /* DrinkDetailPresenter.swift */; };
-		2DB4596F26CBF21300CC2DCA /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4596E26CBF21300CC2DCA /* Tests.swift */; };
+		2DB4596F26CBF21300CC2DCA /* DrinkDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4596E26CBF21300CC2DCA /* DrinkDetailTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D8D23A326CBF9B7009FEA65 /* DrinkDetailResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DrinkDetailResponse.json; sourceTree = "<group>"; };
 		2D94DD5F26C843E9006D156F /* HattrickChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HattrickChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D94DD6226C843E9006D156F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D94DD6426C843E9006D156F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +72,7 @@
 		2DB4596226CAE32000CC2DCA /* DrinksEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksEndpoint.swift; sourceTree = "<group>"; };
 		2DB4596426CAEC3200CC2DCA /* DrinkDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailPresenter.swift; sourceTree = "<group>"; };
 		2DB4596C26CBF21300CC2DCA /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DB4596E26CBF21300CC2DCA /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		2DB4596E26CBF21300CC2DCA /* DrinkDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailTests.swift; sourceTree = "<group>"; };
 		2DB4597026CBF21300CC2DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,8 +202,9 @@
 		2DB4596D26CBF21300CC2DCA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				2DB4596E26CBF21300CC2DCA /* Tests.swift */,
+				2DB4596E26CBF21300CC2DCA /* DrinkDetailTests.swift */,
 				2DB4597026CBF21300CC2DCA /* Info.plist */,
+				2D8D23A326CBF9B7009FEA65 /* DrinkDetailResponse.json */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8D23A426CBF9B7009FEA65 /* DrinkDetailResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DB4596F26CBF21300CC2DCA /* Tests.swift in Sources */,
+				2DB4596F26CBF21300CC2DCA /* DrinkDetailTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +530,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hattrick Challenge.app/Hattrick Challenge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HattrickChallenge.app/HattrickChallenge";
 			};
 			name = Debug;
 		};
@@ -545,7 +549,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hattrick Challenge.app/Hattrick Challenge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HattrickChallenge.app/HattrickChallenge";
 			};
 			name = Release;
 		};

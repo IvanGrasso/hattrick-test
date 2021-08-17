@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class DrinkDetailViewController: UIViewController {
+class DrinkDetailViewController: UIViewController, DrinkDetailPresenterView {
     
     struct ViewData {
         let title: String
@@ -16,6 +16,8 @@ class DrinkDetailViewController: UIViewController {
         let ingredients: [String]
         let instructions: String
     }
+    
+    private var presenter: DrinkDetailPresenter!
     
     var viewData: ViewData? {
         didSet {
@@ -29,8 +31,10 @@ class DrinkDetailViewController: UIViewController {
     private let instructionsTitleLabel = UILabel()
     private let instructionsLabel = UILabel()
     
-    static func make() -> DrinkDetailViewController {
-        return DrinkDetailViewController(nibName: String(describing: DrinkDetailViewController.self), bundle: nil)
+    static func make(presenter: DrinkDetailPresenter) -> DrinkDetailViewController {
+        let vc = DrinkDetailViewController(nibName: String(describing: DrinkDetailViewController.self), bundle: nil)
+        vc.presenter = presenter
+        return vc
     }
     
     override func viewDidLoad() {
@@ -44,6 +48,8 @@ class DrinkDetailViewController: UIViewController {
         
         instructionsLabel.textColor = Colors.Text.mainTextColor
         instructionsLabel.numberOfLines = 0
+        
+        presenter.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -7,9 +7,17 @@
 
 import UIKit
 
-class DrinkListTableViewController: UITableViewController {
+final class DrinkListTableViewController: UITableViewController {
     
-    private let presenter = DrinkPresenter()
+    struct ViewData {
+        let drinks: [DrinkItem]
+    }
+    
+    private let presenter: DrinkListPresenter = {
+        let service = DrinksService()
+        return DrinkListPresenter(service: service)
+    }()
+    
     private var drinks = [DrinkItem]() {
         didSet {
             DispatchQueue.main.async() {
@@ -31,7 +39,7 @@ class DrinkListTableViewController: UITableViewController {
         
         view.backgroundColor = Colors.mainBackgroundColor
                 
-        presenter.delegate = self
+        presenter.view = self
         presenter.viewDidLoad()
     }
     
@@ -52,20 +60,11 @@ class DrinkListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let drinkID = drinks[indexPath.row].id
-        presenter.didSelectDrinkWithID(drinkID)
+        presenter.didSelectDrink(withID: drinkID)
     }
 }
 
-extension DrinkListTableViewController: DrinkPresenterDelegate {
-    func presentDetail(_ detail: DrinkDetail) {
-        let viewData = DrinkDetailViewController.ViewData(detail: detail)
-        DispatchQueue.main.async() {
-            let detailVC = DrinkDetailViewController.make()
-            detailVC.viewData = viewData
-            self.navigationController?.pushViewController(detailVC, animated: true)
-        }
-    }
-    
+extension DrinkListTableViewController: DrinkListPresenterView {
     func presentDrinks(_ drinks: [DrinkItem]) {
         self.drinks = drinks
     }

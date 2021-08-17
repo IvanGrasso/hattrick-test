@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class DrinkDetailViewController: UIViewController, DrinkDetailPresenterView {
+final class DrinkDetailViewController: UIViewController, DrinkDetailPresenterView {
     
     struct ViewData {
         let title: String

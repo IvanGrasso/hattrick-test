@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class DrinkCell: UITableViewCell {
+final class DrinkCell: UITableViewCell {
     
     struct ViewData {
         let title: String

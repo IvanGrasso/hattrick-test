@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DrinkListTableViewController: UITableViewController {
+final class DrinkListTableViewController: UITableViewController, DrinkListPresenterView {
     
     struct ViewData {
         let drinks: [DrinkItem]
@@ -18,7 +18,7 @@ final class DrinkListTableViewController: UITableViewController {
         return DrinkListPresenter(service: service)
     }()
     
-    private var drinks = [DrinkItem]() {
+    var viewData: ViewData? {
         didSet {
             DispatchQueue.main.async() {
                 self.tableView.reloadData()
@@ -44,28 +44,24 @@ final class DrinkListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drinks.count
+        return viewData?.drinks.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DrinkCell.self)) as? DrinkCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DrinkCell.self)) as? DrinkCell,
+              let viewData = viewData else {
             return UITableViewCell()
         }
         
-        let viewData = DrinkCell.ViewData(drink: drinks[indexPath.row])
-        cell.viewData = viewData
+        let cellViewData = DrinkCell.ViewData(drink: viewData.drinks[indexPath.row])
+        cell.viewData = cellViewData
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let drinkID = drinks[indexPath.row].id
+        guard let viewData = viewData else { return }
+        let drinkID = viewData.drinks[indexPath.row].id
         presenter.didSelectDrink(withID: drinkID)
-    }
-}
-
-extension DrinkListTableViewController: DrinkListPresenterView {
-    func presentDrinks(_ drinks: [DrinkItem]) {
-        self.drinks = drinks
     }
 }

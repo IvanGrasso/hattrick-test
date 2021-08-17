@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol DrinkListPresenterView: UIViewController {
-    func presentDrinks(_ drinks: [DrinkItem])
+    var viewData: DrinkListTableViewController.ViewData? { get set }
 }
 
 final class DrinkListPresenter {
@@ -26,7 +26,8 @@ final class DrinkListPresenter {
         service.fetchDrinks(completion: { [weak self] result in
             switch result {
             case .success(let drinks):
-                self?.view?.presentDrinks(drinks)
+                let viewData = DrinkListTableViewController.ViewData(drinks: drinks)
+                self?.view?.viewData = viewData
             case .failure(_):
 //                FIXME: Handle.
                 break

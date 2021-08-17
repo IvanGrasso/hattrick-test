@@ -42,11 +42,11 @@ struct DrinkDetail: Decodable {
         
         let dynamicKeysContainer = try decoder.container(keyedBy: DynamicKey.self)
         
-        self.ingredients = dynamicKeysContainer.allKeys.filter { $0.stringValue.contains("strIngredient") }.compactMap {
+        self.ingredients = dynamicKeysContainer.allKeys.filter { $0.stringValue.hasPrefix("strIngredient") }.compactMap {
             try? dynamicKeysContainer.decode(String.self, forKey: $0)
         }
         
-        self.measures = dynamicKeysContainer.allKeys.filter { $0.stringValue.contains("strMeasure") }.compactMap {
+        self.measures = dynamicKeysContainer.allKeys.filter { $0.stringValue.hasPrefix("strMeasure") }.compactMap {
             try? dynamicKeysContainer.decode(String.self, forKey: $0)
         }
     }

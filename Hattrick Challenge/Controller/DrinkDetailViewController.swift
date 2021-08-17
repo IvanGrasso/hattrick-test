@@ -98,7 +98,7 @@ extension DrinkDetailViewController.ViewData {
         self.imageURL = detail.thumbnail
         self.ingredients = detail.measures.enumerated().map { index, measure in
             guard detail.ingredients.indices.contains(index) else { return "" }
-            return measure + " - \(detail.ingredients[index])"
+            return measure + "- \(detail.ingredients[index])"
         }
         self.instructions = detail.instructions
     }

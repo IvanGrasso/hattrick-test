@@ -42,13 +42,23 @@ struct DrinkDetail: Decodable {
         
         let dynamicKeysContainer = try decoder.container(keyedBy: DynamicKey.self)
         
-        self.ingredients = dynamicKeysContainer.allKeys.filter { $0.stringValue.hasPrefix("strIngredient") }.compactMap {
+        self.ingredients = dynamicKeysContainer.sortedKeys(withPrefix: "strIngredient").compactMap {
             try? dynamicKeysContainer.decode(String.self, forKey: $0)
         }
         
-        self.measures = dynamicKeysContainer.allKeys.filter { $0.stringValue.hasPrefix("strMeasure") }.compactMap {
+        self.measures = dynamicKeysContainer.sortedKeys(withPrefix: "strMeasure").compactMap {
             try? dynamicKeysContainer.decode(String.self, forKey: $0)
         }
     }
     
+}
+
+private extension KeyedDecodingContainer {
+//    Finds keys ending with a number with a given prefix and sorts them in ascending order.
+    func sortedKeys(withPrefix prefix: String) -> [KeyedDecodingContainer.Key] {
+        let prefixKeys = self.allKeys.filter { $0.stringValue.hasPrefix(prefix) }
+        return prefixKeys.sorted(by: {
+            Int($0.stringValue.replacingOccurrences(of: prefix, with: "")) ?? 0 < Int($1.stringValue.replacingOccurrences(of: prefix, with: "")) ?? 0
+        })
+    }
 }

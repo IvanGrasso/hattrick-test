@@ -42,8 +42,19 @@ final class DrinkCell: UITableViewCell {
         guard let viewData = viewData else { return }
         
         titleLabel.text = viewData.title
-        thumbnailImageView.image = nil
-        thumbnailImageView.loadImage(fromURLString: viewData.thumbnail, placeholder: "cocktail-placeholder")
+        thumbnailImageView.image = UIImage(named: "cocktail-placeholder")
+        
+        ImageLoader().loadImage(at: viewData.thumbnail) { result in
+            switch result {
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self.thumbnailImageView.image = image
+                }
+            case .failure(_):
+//                TODO: Handle.
+                break
+            }
+        }
     }
 }
 

@@ -8,27 +8,27 @@
 import Foundation
 import UIKit
 
-extension UIImageView {
-    func loadImage(fromURLString urlString: String?, withContentMode mode: UIView.ContentMode = .scaleAspectFit, placeholder: String? = nil) {
-        self.contentMode = mode
-        if let placeholder = placeholder {
-            self.image = UIImage(named: placeholder)
+enum ImageLoadingError: Error {
+    case invalidURL
+    case invalidData
+}
+
+struct ImageLoader {
+    
+    func loadImage(at urlString: String, completion: @escaping (Result<UIImage, Error>) -> Void) {
+        guard let url = URL(string: urlString) else {
+            completion(.failure(ImageLoadingError.invalidURL))
+            return
         }
-        if let urlString = urlString,
-           let url = URL(string: urlString) {
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                    let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                    let data = data, error == nil,
-                    let image = UIImage(data: data) {
-                    DispatchQueue.main.async() {
-                        self.image = image
-                    }
-                } else if let error = error {
-                    print("Error: Couldn't download image (\(error.localizedDescription))")
-                    return
-                }
-            }.resume()
-        }
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            if let error = error {
+                completion(.failure(error))
+            } else if let data = data,
+                      let image = UIImage(data: data) {
+                completion(.success(image))
+            } else {
+                completion(.failure(ImageLoadingError.invalidData))
+            }
+        }.resume()
     }
 }

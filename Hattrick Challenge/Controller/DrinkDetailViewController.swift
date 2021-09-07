@@ -44,6 +44,8 @@ final class DrinkDetailViewController: UIViewController, DrinkDetailPresenterVie
         containerView.applyCustomCornersAndShadow()
         contentStackView.spacing = 16
         
+        imageView.contentMode = .scaleAspectFill
+        
         instructionsTitleLabel.textColor = Colors.Text.mainTextColor
         
         instructionsLabel.textColor = Colors.Text.mainTextColor
@@ -64,8 +66,18 @@ final class DrinkDetailViewController: UIViewController, DrinkDetailPresenterVie
               self.isViewLoaded else { return }
         
         title = viewData.title
-                
-        imageView.loadImage(fromURLString: viewData.imageURL, withContentMode: .scaleAspectFill)
+        
+        ImageLoader().loadImage(at: viewData.imageURL) { result in
+            switch result {
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self.imageView.image = image
+                }
+            case .failure(_):
+//                TODO: Handle.
+                break
+            }
+        }
         
         contentStackView.arrangedSubviews.forEach{ $0.removeFromSuperview() }
         

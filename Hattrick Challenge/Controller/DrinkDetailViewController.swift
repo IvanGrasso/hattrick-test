@@ -40,6 +40,8 @@ final class DrinkDetailViewController: UIViewController, DrinkDetailPresenterVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        TODO: Improve transition (detail empty state).
+        
         view.backgroundColor = Colors.mainBackgroundColor
         containerView.applyCustomCornersAndShadow()
         contentStackView.spacing = 16

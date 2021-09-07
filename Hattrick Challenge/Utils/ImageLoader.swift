@@ -1,6 +1,6 @@
 //
-//  UIImageView+LoadFromURL.swift
-//  LuckyChallenge
+//  ImageLoader.swift
+//  HattrickChallenge
 //
 //  Created by Ivan Grasso on 7/21/21.
 //

@@ -44,11 +44,11 @@ final class DrinkCell: UITableViewCell {
         titleLabel.text = viewData.title
         thumbnailImageView.image = UIImage(named: "cocktail-placeholder")
         
-        ImageLoader().loadImage(at: viewData.thumbnail) { result in
+        ImageLoader().loadImage(at: viewData.thumbnail) { [weak self] result in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {
-                    self.thumbnailImageView.image = image
+                    self?.thumbnailImageView.image = image
                 }
             case .failure(_):
 //                TODO: Handle.

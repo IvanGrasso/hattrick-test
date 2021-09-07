@@ -69,11 +69,11 @@ final class DrinkDetailViewController: UIViewController, DrinkDetailPresenterVie
         
         title = viewData.title
         
-        ImageLoader().loadImage(at: viewData.imageURL) { result in
+        ImageLoader().loadImage(at: viewData.imageURL) { [weak self] result in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {
-                    self.imageView.image = image
+                    self?.imageView.image = image
                 }
             case .failure(_):
 //                TODO: Handle.

@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D8D23A426CBF9B7009FEA65 /* DrinkDetailResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D8D23A326CBF9B7009FEA65 /* DrinkDetailResponse.json */; };
+		2D94DD6326C843E9006D156F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD6226C843E9006D156F /* AppDelegate.swift */; };
+		2D94DD6526C843E9006D156F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD6426C843E9006D156F /* SceneDelegate.swift */; };
+		2D94DD6726C843E9006D156F /* DrinkListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD6626C843E9006D156F /* DrinkListTableViewController.swift */; };
+		2D94DD6A26C843E9006D156F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D94DD6826C843E9006D156F /* Main.storyboard */; };
+		2D94DD6C26C843EA006D156F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D94DD6B26C843EA006D156F /* Assets.xcassets */; };
+		2D94DD7826C844DF006D156F /* DrinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7726C844DF006D156F /* DrinkItem.swift */; };
+		2D94DD7A26C84562006D156F /* DrinkListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7926C84562006D156F /* DrinkListResponse.swift */; };
+		2D94DD7C26C845F0006D156F /* DrinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7B26C845F0006D156F /* DrinksService.swift */; };
+		2D94DD7E26C8502C006D156F /* DrinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D94DD7D26C8502C006D156F /* DrinkCell.xib */; };
+		2D94DD8026C85371006D156F /* DrinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD7F26C85371006D156F /* DrinkCell.swift */; };
+		2D94DD8326C85910006D156F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD8226C85910006D156F /* ImageLoader.swift */; };
+		2D94DD8526C8781F006D156F /* DrinkListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94DD8426C8781F006D156F /* DrinkListPresenter.swift */; };
+		2DB4594826C9CA6500CC2DCA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4594726C9CA6500CC2DCA /* Colors.swift */; };
+		2DB4594E26C9DC2600CC2DCA /* DrinkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4594D26C9DC2600CC2DCA /* DrinkDetail.swift */; };
+		2DB4595026C9E07200CC2DCA /* DrinkDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4594F26C9E07200CC2DCA /* DrinkDetailResponse.swift */; };
+		2DB4595226CA830700CC2DCA /* DrinkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4595126CA830600CC2DCA /* DrinkDetailViewController.swift */; };
+		2DB4595426CA98CE00CC2DCA /* DrinkDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB4595326CA98CE00CC2DCA /* DrinkDetailViewController.xib */; };
+		2DB4595926CAA4F900CC2DCA /* UIView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4595826CAA4F900CC2DCA /* UIView+Style.swift */; };
+		2DB4595B26CAE23700CC2DCA /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4595A26CAE23700CC2DCA /* NetworkClient.swift */; };
+		2DB4595D26CAE24600CC2DCA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4595C26CAE24600CC2DCA /* Endpoint.swift */; };
+		2DB4595F26CAE27A00CC2DCA /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4595E26CAE27A00CC2DCA /* Cancellable.swift */; };
+		2DB4596326CAE32000CC2DCA /* DrinksEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4596226CAE32000CC2DCA /* DrinksEndpoint.swift */; };
+		2DB4596526CAEC3200CC2DCA /* DrinkDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4596426CAEC3200CC2DCA /* DrinkDetailPresenter.swift */; };
+		2DB4596F26CBF21300CC2DCA /* DrinkDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4596E26CBF21300CC2DCA /* DrinkDetailTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DB4597126CBF21300CC2DCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D94DD5726C843E9006D156F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D94DD5E26C843E9006D156F;
+			remoteInfo = "Ivan Grasso";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D8D23A326CBF9B7009FEA65 /* DrinkDetailResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DrinkDetailResponse.json; sourceTree = "<group>"; };
+		2D94DD5F26C843E9006D156F /* HattrickChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HattrickChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D94DD6226C843E9006D156F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2D94DD6426C843E9006D156F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2D94DD6626C843E9006D156F /* DrinkListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListTableViewController.swift; sourceTree = "<group>"; };
+		2D94DD6926C843E9006D156F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D94DD6B26C843EA006D156F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D94DD7026C843EA006D156F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D94DD7726C844DF006D156F /* DrinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkItem.swift; sourceTree = "<group>"; };
+		2D94DD7926C84562006D156F /* DrinkListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListResponse.swift; sourceTree = "<group>"; };
+		2D94DD7B26C845F0006D156F /* DrinksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksService.swift; sourceTree = "<group>"; };
+		2D94DD7D26C8502C006D156F /* DrinkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCell.xib; sourceTree = "<group>"; };
+		2D94DD7F26C85371006D156F /* DrinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCell.swift; sourceTree = "<group>"; };
+		2D94DD8226C85910006D156F /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		2D94DD8426C8781F006D156F /* DrinkListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListPresenter.swift; sourceTree = "<group>"; };
+		2DB4594726C9CA6500CC2DCA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2DB4594D26C9DC2600CC2DCA /* DrinkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetail.swift; sourceTree = "<group>"; };
+		2DB4594F26C9E07200CC2DCA /* DrinkDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailResponse.swift; sourceTree = "<group>"; };
+		2DB4595126CA830600CC2DCA /* DrinkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailViewController.swift; sourceTree = "<group>"; };
+		2DB4595326CA98CE00CC2DCA /* DrinkDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkDetailViewController.xib; sourceTree = "<group>"; };
+		2DB4595826CAA4F900CC2DCA /* UIView+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Style.swift"; sourceTree = "<group>"; };
+		2DB4595A26CAE23700CC2DCA /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		2DB4595C26CAE24600CC2DCA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2DB4595E26CAE27A00CC2DCA /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		2DB4596226CAE32000CC2DCA /* DrinksEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksEndpoint.swift; sourceTree = "<group>"; };
+		2DB4596426CAEC3200CC2DCA /* DrinkDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailPresenter.swift; sourceTree = "<group>"; };
+		2DB4596C26CBF21300CC2DCA /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DB4596E26CBF21300CC2DCA /* DrinkDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailTests.swift; sourceTree = "<group>"; };
+		2DB4597026CBF21300CC2DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D94DD5C26C843E9006D156F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DB4596926CBF21300CC2DCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D94DD5626C843E9006D156F = {
+			isa = PBXGroup;
+			children = (
+				2D94DD6126C843E9006D156F /* Hattrick Challenge */,
+				2DB4596D26CBF21300CC2DCA /* Tests */,
+				2D94DD6026C843E9006D156F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D94DD6026C843E9006D156F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D94DD5F26C843E9006D156F /* HattrickChallenge.app */,
+				2DB4596C26CBF21300CC2DCA /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D94DD6126C843E9006D156F /* Hattrick Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				2D94DD6226C843E9006D156F /* AppDelegate.swift */,
+				2D94DD6426C843E9006D156F /* SceneDelegate.swift */,
+				2D94DD6826C843E9006D156F /* Main.storyboard */,
+				2D94DD6B26C843EA006D156F /* Assets.xcassets */,
+				2D94DD7026C843EA006D156F /* Info.plist */,
+				2DB4596126CAE2CD00CC2DCA /* Service */,
+				2D94DD7626C844CB006D156F /* Model */,
+				2D94DD8126C857CD006D156F /* View */,
+				2DB4595526CA998900CC2DCA /* Controller */,
+				2DB4594A26C9D0B700CC2DCA /* Presenter */,
+				2DB4596026CAE2AA00CC2DCA /* Networking */,
+				2DB4594926C9D08A00CC2DCA /* Utils */,
+			);
+			path = "Hattrick Challenge";
+			sourceTree = "<group>";
+		};
+		2D94DD7626C844CB006D156F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D94DD7926C84562006D156F /* DrinkListResponse.swift */,
+				2DB4594F26C9E07200CC2DCA /* DrinkDetailResponse.swift */,
+				2D94DD7726C844DF006D156F /* DrinkItem.swift */,
+				2DB4594D26C9DC2600CC2DCA /* DrinkDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D94DD8126C857CD006D156F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D94DD7F26C85371006D156F /* DrinkCell.swift */,
+				2D94DD7D26C8502C006D156F /* DrinkCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DB4594926C9D08A00CC2DCA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2DB4594726C9CA6500CC2DCA /* Colors.swift */,
+				2D94DD8226C85910006D156F /* ImageLoader.swift */,
+				2DB4595826CAA4F900CC2DCA /* UIView+Style.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2DB4594A26C9D0B700CC2DCA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2D94DD8426C8781F006D156F /* DrinkListPresenter.swift */,
+				2DB4596426CAEC3200CC2DCA /* DrinkDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2DB4595526CA998900CC2DCA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D94DD6626C843E9006D156F /* DrinkListTableViewController.swift */,
+				2DB4595126CA830600CC2DCA /* DrinkDetailViewController.swift */,
+				2DB4595326CA98CE00CC2DCA /* DrinkDetailViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2DB4596026CAE2AA00CC2DCA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2DB4595A26CAE23700CC2DCA /* NetworkClient.swift */,
+				2DB4595C26CAE24600CC2DCA /* Endpoint.swift */,
+				2DB4595E26CAE27A00CC2DCA /* Cancellable.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2DB4596126CAE2CD00CC2DCA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2D94DD7B26C845F0006D156F /* DrinksService.swift */,
+				2DB4596226CAE32000CC2DCA /* DrinksEndpoint.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2DB4596D26CBF21300CC2DCA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2DB4596E26CBF21300CC2DCA /* DrinkDetailTests.swift */,
+				2DB4597026CBF21300CC2DCA /* Info.plist */,
+				2D8D23A326CBF9B7009FEA65 /* DrinkDetailResponse.json */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D94DD5E26C843E9006D156F /* HattrickChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D94DD7326C843EA006D156F /* Build configuration list for PBXNativeTarget "HattrickChallenge" */;
+			buildPhases = (
+				2D94DD5B26C843E9006D156F /* Sources */,
+				2D94DD5C26C843E9006D156F /* Frameworks */,
+				2D94DD5D26C843E9006D156F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HattrickChallenge;
+			productName = "Ivan Grasso";
+			productReference = 2D94DD5F26C843E9006D156F /* HattrickChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DB4596B26CBF21300CC2DCA /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DB4597326CBF21300CC2DCA /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				2DB4596826CBF21300CC2DCA /* Sources */,
+				2DB4596926CBF21300CC2DCA /* Frameworks */,
+				2DB4596A26CBF21300CC2DCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DB4597226CBF21300CC2DCA /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 2DB4596C26CBF21300CC2DCA /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D94DD5726C843E9006D156F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					2D94DD5E26C843E9006D156F = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					2DB4596B26CBF21300CC2DCA = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 2D94DD5E26C843E9006D156F;
+					};
+				};
+			};
+			buildConfigurationList = 2D94DD5A26C843E9006D156F /* Build configuration list for PBXProject "HattrickChallenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D94DD5626C843E9006D156F;
+			productRefGroup = 2D94DD6026C843E9006D156F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D94DD5E26C843E9006D156F /* HattrickChallenge */,
+				2DB4596B26CBF21300CC2DCA /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D94DD5D26C843E9006D156F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB4595426CA98CE00CC2DCA /* DrinkDetailViewController.xib in Resources */,
+				2D94DD6C26C843EA006D156F /* Assets.xcassets in Resources */,
+				2D94DD7E26C8502C006D156F /* DrinkCell.xib in Resources */,
+				2D94DD6A26C843E9006D156F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DB4596A26CBF21300CC2DCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D8D23A426CBF9B7009FEA65 /* DrinkDetailResponse.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D94DD5B26C843E9006D156F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB4595926CAA4F900CC2DCA /* UIView+Style.swift in Sources */,
+				2D94DD6726C843E9006D156F /* DrinkListTableViewController.swift in Sources */,
+				2DB4594826C9CA6500CC2DCA /* Colors.swift in Sources */,
+				2D94DD7A26C84562006D156F /* DrinkListResponse.swift in Sources */,
+				2DB4595226CA830700CC2DCA /* DrinkDetailViewController.swift in Sources */,
+				2D94DD6326C843E9006D156F /* AppDelegate.swift in Sources */,
+				2DB4595F26CAE27A00CC2DCA /* Cancellable.swift in Sources */,
+				2D94DD8026C85371006D156F /* DrinkCell.swift in Sources */,
+				2DB4596526CAEC3200CC2DCA /* DrinkDetailPresenter.swift in Sources */,
+				2DB4594E26C9DC2600CC2DCA /* DrinkDetail.swift in Sources */,
+				2DB4596326CAE32000CC2DCA /* DrinksEndpoint.swift in Sources */,
+				2DB4595026C9E07200CC2DCA /* DrinkDetailResponse.swift in Sources */,
+				2D94DD7826C844DF006D156F /* DrinkItem.swift in Sources */,
+				2DB4595D26CAE24600CC2DCA /* Endpoint.swift in Sources */,
+				2D94DD8526C8781F006D156F /* DrinkListPresenter.swift in Sources */,
+				2DB4595B26CAE23700CC2DCA /* NetworkClient.swift in Sources */,
+				2D94DD7C26C845F0006D156F /* DrinksService.swift in Sources */,
+				2D94DD8326C85910006D156F /* ImageLoader.swift in Sources */,
+				2D94DD6526C843E9006D156F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DB4596826CBF21300CC2DCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB4596F26CBF21300CC2DCA /* DrinkDetailTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DB4597226CBF21300CC2DCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D94DD5E26C843E9006D156F /* HattrickChallenge */;
+			targetProxy = 2DB4597126CBF21300CC2DCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D94DD6826C843E9006D156F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D94DD6926C843E9006D156F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D94DD7126C843EA006D156F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2D94DD7226C843EA006D156F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D94DD7426C843EA006D156F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Hattrick Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HattrickChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D94DD7526C843EA006D156F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Hattrick Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HattrickChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2DB4597426CBF21300CC2DCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hattrick.ivan-grasso.Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HattrickChallenge.app/HattrickChallenge";
+			};
+			name = Debug;
+		};
+		2DB4597526CBF21300CC2DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hattrick.ivan-grasso.Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HattrickChallenge.app/HattrickChallenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D94DD5A26C843E9006D156F /* Build configuration list for PBXProject "HattrickChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D94DD7126C843EA006D156F /* Debug */,
+				2D94DD7226C843EA006D156F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D94DD7326C843EA006D156F /* Build configuration list for PBXNativeTarget "HattrickChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D94DD7426C843EA006D156F /* Debug */,
+				2D94DD7526C843EA006D156F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DB4597326CBF21300CC2DCA /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DB4597426CBF21300CC2DCA /* Debug */,
+				2DB4597526CBF21300CC2DCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D94DD5726C843E9006D156F /* Project object */;
+}
